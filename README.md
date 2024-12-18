@@ -7,8 +7,8 @@ Run docker compose up -d <BR>
 Un-comment line 3 and docker-compose up -d<BR>
 Have fun using TLS 1.3<BR>
 
-Once the container has started you'll need to find the auto-generated password to login.
-docker ps|grep openvpn-as
-docker logs -f XX |grep pass 
-
-Username=openvpn
+Once the container has started you'll need to find the auto-generated password to login.<br>
+docker ps|grep openvpn-as<br>
+docker logs -f XX |grep pass <br>
+<br>
+Username=openvpn<br>
