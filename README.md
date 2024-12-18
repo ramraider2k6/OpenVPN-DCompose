@@ -1,16 +1,50 @@
-# OpenVPN-DCompose
-Docker Compose release of Open VPN Access Server <BR>
-Very simple Docker compose file to ensure you can just pull this and get up and running with minimum effort.<BR>
-Ensure you've set your network appropriatly re firewall ports.<BR>
-Grab the docker-compose.yml <BR>
- git clone https://github.com/ramraider2k6/OpenVPN-DCompose.git<BR>
- cd OpenVPN-DCompose <BR>
-Then start it depending on what release of docker compose you have<BR>
- docker compose up -d <BR>
-Un-comment line 3 and docker-compose up -d<BR>
-Have fun using TLS 1.3<BR>
-Once the container has started you'll need to find the auto-generated password to login.<br>
- docker ps|grep openvpn-as<br>
- docker logs -f XX |grep pass <br>
-Where XX is the container ID<br>
-The Username=openvpn<br>
+# Docker Compose Release of OpenVPN Access Server
+
+A very simple Docker Compose file to ensure you can just pull this and get up and running with minimum effort.
+
+**Ensure you've set your network appropriately regarding firewall ports.**
+
+## Steps to Get Started
+
+1. **Grab the docker-compose.yml:**
+    ```sh
+    git clone https://github.com/ramraider2k6/OpenVPN-DCompose.git
+    cd OpenVPN-DCompose
+    ```
+
+2. **Then start it depending on what release of Docker Compose you have:**
+    - For Docker Compose V1:
+        ```sh
+        docker-compose up -d
+        ```
+    - For Docker Compose V2 (current version):
+        ```sh
+        docker compose up -d
+        ```
+
+3. **Uncomment line 3 and start Docker Compose:**
+    ```sh
+    # Edit the docker-compose.yml file and uncomment line 3
+    docker-compose up -d
+    ```
+
+**Enjoy using TLS 1.3!**
+
+## Finding the Auto-Generated Password to Login
+
+Once the container has started, you'll need to find the auto-generated password to log in.
+
+1. **Get the container ID:**
+    ```sh
+    docker ps | grep openvpn-as
+    ```
+
+2. **Fetch the password (replace `XX` with the container ID):**
+    ```sh
+    docker logs -f XX | grep pass
+    ```
+
+**The username is `openvpn`.**
+
+---
+
