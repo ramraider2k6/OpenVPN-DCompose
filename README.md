@@ -36,13 +36,10 @@ Once the container has started, you'll need to find the auto-generated password 
 
 1. **Get the container ID:**
     ```sh
-    docker ps | grep openvpn-as
+    docker logs openvpn-as | grep "Auto-generated pass"
     ```
 
-2. **Fetch the password (replace `XX` with the container ID):**
-    ```sh
-    docker logs -f XX | grep pass
-    ```
+2. **Browse to https://youropenvpnserver:943 and login with password**
 
 **The username is `openvpn`.**
 
