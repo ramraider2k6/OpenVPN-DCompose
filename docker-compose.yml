@@ -1,7 +1,7 @@
 ---
-# Only uncomment line 3 if using older docker-compose not "docker compose"
-#  version: "2.6"
-# Open-vpn Docker compose file
+# Only uncomment line 5 if using older docker-compose not "docker compose"
+# version: "2.7"
+# Open-vpn Docker compose file with quick values set and volume mounted for instant access.
 # sudo docker pull openvpn/openvpn-as
 services:
   openvpn-as:
